@@ -10,7 +10,11 @@
 <div class="container" fxlayout="column" fxLayoutGap="10px">
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)">
+      <mat-grid-tile
+        *ngFor="let dish of dishes"
+        [routerLink]="['/dishdetail', dish.id]"
+      >
+        >
         <img
           height="200px"
           matListAvatar
@@ -23,7 +27,4 @@
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-</div>
-<div>
-  <app-dishdetail [dish]="selectedDish"></app-dishdetail>
 </div>
