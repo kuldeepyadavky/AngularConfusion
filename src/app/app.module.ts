@@ -34,7 +34,7 @@ import { PromotionService } from './services/promotion.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { baseURL } from './shared/baseurl';
-
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +73,7 @@ import { baseURL } from './shared/baseurl';
     DishService,
     LeaderService,
     PromotionService,
+    ProcessHTTPMsgService,
     { provide: 'BaseURL', useValue: baseURL },
   ],
   entryComponents: [LoginComponent],
